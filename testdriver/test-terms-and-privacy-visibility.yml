@@ -1,0 +1,13 @@
+version: 4.0.80
+steps:
+  - prompt: Scroll to the footer.
+    commands:
+      - command: scroll-until-text
+        text: Privacy
+        direction: down
+  - prompt: Click "Privacy" or "Rules".
+    commands:
+      - command: hover-text
+        text: Privacy
+        description: link in the footer
+        action: click
