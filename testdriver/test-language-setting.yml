@@ -1,0 +1,30 @@
+version: 4.0.80
+steps:
+  - prompt: Click "English" in the footer.
+    commands:
+      - command: scroll-until-text
+        text: English
+        direction: down
+      - command: hover-text
+        text: English
+        description: language option in the footer
+        action: click
+  - prompt: Assert language options appear.
+    commands:
+      - command: assert
+        expect: the language options are visible
+  - prompt: >-
+      Change the language and assert that the page updates correspondingly.  #
+      Use the content of the file from the environment
+    commands:
+      - command: hover-text
+        text: English (English)
+        description: language dropdown
+        action: click
+      - command: hover-text
+        text: Español (Spanish)
+        description: select Spanish from the dropdown
+        action: click
+      - command: hover-image
+        description: confirm language change button
+        action: click
