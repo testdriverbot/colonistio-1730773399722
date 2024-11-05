@@ -1,0 +1,28 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "Login".
+    commands:
+      - command: hover-text
+        text: Login
+        description: login button in the header
+        action: click
+  - prompt: Assert that a sign-up or login form appears.
+    commands:
+      - command: assert
+        expect: the login form is visible
+  - prompt: Complete any sign-up process if registration is required.
+    commands:
+      - command: hover-text
+        text: Login with Google
+        description: Google login button
+        action: click
+  - prompt: Complete any sign-up process if registration is required.
+    commands:
+      - command: type
+        text: test@example.com
+  - prompt: Complete any sign-up process if registration is required.
+    commands:
+      - command: hover-text
+        text: Next
+        description: next button in the Google sign-in form
+        action: click
