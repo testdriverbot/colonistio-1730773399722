@@ -1,0 +1,20 @@
+version: 4.0.80
+steps:
+  - prompt: Click "Store" in the header.
+    commands:
+      - command: hover-text
+        text: Store
+        description: link in the header
+        action: click
+  - prompt: Assert that the store interface shows.
+    commands:
+      - command: assert
+        expect: the store interface is visible with membership options
+  - prompt: >-
+      Try to interact with a potential item  # Use the content of the file from
+      the environment
+    commands:
+      - command: hover-text
+        text: Subscribe
+        description: button for Plus membership
+        action: click
