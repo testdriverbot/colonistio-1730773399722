@@ -1,0 +1,14 @@
+version: 4.0.80
+steps:
+  - prompt: Click "Play Online".
+    commands:
+      - command: hover-text
+        text: Play Online
+        description: button to start playing online
+        action: click
+  - prompt: >-
+      Assert that the game interface or login prompt displays.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the "Select Game Type" overlay is visible
