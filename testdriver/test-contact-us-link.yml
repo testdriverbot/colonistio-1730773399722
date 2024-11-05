@@ -1,0 +1,33 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "Community" in the footer.
+    commands:
+      - command: scroll-until-text
+        text: Community
+        direction: down
+      - command: hover-text
+        text: Community
+        description: link in the footer
+        action: click
+  - prompt: Assert there is a way to contact the company or engage with them.
+    commands:
+      - command: assert
+        expect: there is a way to contact the company or engage with them
+  - prompt: Follow any instructions to send a message or start a chat.
+    commands:
+      - command: hover-text
+        text: Join Discord
+        description: link to join the Discord community
+        action: click
+  - prompt: Follow any instructions to send a message or start a chat.
+    commands:
+      - command: hover-text
+        text: Join Discord
+        description: button to join the Discord community
+        action: click
+  - prompt: Follow any instructions to send a message or start a chat.
+    commands:
+      - command: hover-text
+        text: Join Discord
+        description: button to join the Discord community
+        action: click
