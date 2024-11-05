@@ -1,0 +1,18 @@
+version: 4.0.80
+steps:
+  - prompt: Click "Leaderboards" in the header.
+    commands:
+      - command: hover-text
+        text: Leaderboards
+        description: link in the header
+        action: click
+  - prompt: Assert that a leaderboard page displays.
+    commands:
+      - command: assert
+        expect: the leaderboard page displays with "Rank" and "Player" columns
+  - prompt: >-
+      Check that leaderboard entries are visible.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: leaderboard entries are visible with "Rank" and "Player" columns
